@@ -1,0 +1,3 @@
+method: seat- calculate_end_date
+method: seat- check_avb
+method: seat- add_fees 
