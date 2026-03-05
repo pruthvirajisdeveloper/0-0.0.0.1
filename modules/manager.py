@@ -23,9 +23,9 @@ class Manager:
         return self.admin.get_id_card(id=id_no)
 
 
-    def new_student(self):
-        self.admin.new_student(id=10, name='pruthviraj', age=19, whoami=STUDENT, mo_no=9876543210, address="k-mahankal")
-        self.admin.new_student(id=11, name='sayali', age=21, whoami=STUDENT, mo_no=9876543210, address="k-mahankal")
-        self.admin.new_student(id=12, name='pranav', age=18, whoami=STUDENT, mo_no=9876543210, address="k-mahankal")
-        self.admin.new_student(id=23, name='atharv', age=14, whoami=STUDENT, mo_no=9876543210, address="k-mahankal")
-        self.admin.new_student(id=14, name='kiran', age=12, whoami=STUDENT, mo_no=9876543210, address="k-mahankal")
+    def new_student(self, name, age, whoami, mo_no, address):
+        self.admin.new_student(id=self.create_new_id_for_student(), name=name, age=age, whoami=whoami, mo_no=mo_no, address=address)
+
+    def create_new_id_for_student(self):
+        return 
+    

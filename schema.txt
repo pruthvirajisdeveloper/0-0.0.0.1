@@ -1,0 +1,25 @@
+students:
+
+<%LOCALAPPDATA%>/mahankalilb/
+                            students/
+                                <reg_number>/
+                                        personal.json
+                                        history.json
+                                        payments.json
+
+
+                            admins/
+                                <reg_number>/
+                                        personal.json
+                                        history.json
+
+                            payments/
+                                <payment_id>/
+                                        imfo.json
+
+                            seats/
+                                <seat_number>/
+                                        current.json
+                                        history.json
+                                
+                            index.json

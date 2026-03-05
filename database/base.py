@@ -1,7 +1,5 @@
 import json
 import os
-from core.paths import Paths
-from core.files import Folder
 
 
 class JsonDB:
@@ -33,7 +31,6 @@ class JsonDB:
         return data.get(table, [])
     
 
-
     def delete(self, table, key, value):
         data = self.read()
         data[table] = [r for r in data.get(table, []) if r.get(key) != value]
@@ -46,17 +43,3 @@ class JsonDB:
             if record.get(key) == value:
                 record.update(new_data)
         self.write(data)
-        
-Folder().create(Paths().get_seat_path())
-db = JsonDB(filename=Paths().get_seat_path()+"seat.json")
-
-
-
-db.insert("users", {
-    "id": 1,
-    "name": "Pruthviraj",
-    "role": "admin"
-})
-
-users = db.get_all("users")
-print(users)

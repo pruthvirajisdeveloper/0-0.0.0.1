@@ -14,6 +14,13 @@ class Bill:
         self.pmts.append([amt, date])
         return [self.paid, self.total, self.total-self.paid, date]
 
+    def to_dict(self):
+        return self.__dict__
+
+    @classmethod
+    def from_dict(cls, data):
+        return cls(**data)
+    
     def save(self):
         pass
 
